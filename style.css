@@ -1,0 +1,98 @@
+body {
+    font-family: 'roboto', 'san-serif','serif';
+    background-color: rgb(27, 27, 27);
+}
+
+h1 {
+    font-size: 2.5em;
+    font-family: 'arvo';
+}
+h2 {
+    font-size: 1.8em;
+    font-family: 'OCR A';
+}
+
+img {
+    max-width: 8%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper {
+    margin: auto 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.result-box {
+    margin: 2rem 20rem;
+    padding: 1rem 0;
+    background-color: whitesmoke;
+    border: 3px solid black;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.score {
+    padding-bottom: 3vh;
+    border-bottom: 4px dotted black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.result {
+    min-height: 12rem;
+    /* padding: 0 5rem; */
+    /* min-width: 5vw; */
+}
+
+.btn-style {
+    padding: 1.2rem 2.2rem;
+    margin: 2rem .5rem 0;
+    font-weight: bold;
+    font-family: 'arvo';
+    font-size: 2rem;
+    text-transform: uppercase;
+    border: 3px solid black;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.btnRock {
+    background-color: rebeccapurple;
+}
+.btnPaper {
+    background-color: rgb(153, 51, 148);
+}
+.btnScissors {
+    background-color: rgb(51, 153, 82);
+}
+#btn-4 {
+    background-color: red;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.btn-disabled {
+    background-color: grey;
+    opacity: 1;
+}
+
+.restart {
+    visibility: hidden;
+    cursor: pointer;
+}
