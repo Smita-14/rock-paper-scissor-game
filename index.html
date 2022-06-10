@@ -9,25 +9,30 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="wrapper">
+        <img id="theme-mode" src="./images/moon.png" alt="dark mode">
+    </div>
+
     <div class="container">
 
-        <div class="wrapper">
-            <button class="btn-style btnRock" id="btn-1">Rock</button>
-            <button class="btn-style btnPaper" id="btn-2">Paper</button>
-            <button class="btn-style btnScissors" id="btn-3">Scissors</button>
+        <div class="play-game">
+            <button class="btn-style rock-color" id="rock">Rock</button>
+            <button class="btn-style paper-color" id="paper">Paper</button>
+            <button class="btn-style scissors-color" id="scissors">Scissors</button>
         </div>
         
         
-        <div class="result-box hidden">
-            <div class="score">
+        <div class="result-box">
+
+            <div class="score-board">
                 <h2 class="user-score">Player : 0</h2>
                 <h2 class="comp-score">Computer : 0</h2>
             </div>
-            <div class="result"></div>
+
+            <div class="round-winner"></div>
         </div>
         
-        <!-- <button class="btn-style" id="btn-4">Replay</button> -->
-        <img class="restart" src="./images/replay.png" alt="Replay">
+        <button class="restart-button restart-visibility"><img class="restart-img" src="./images/restart.png" alt="Restart"></button>
 
     </div>
 

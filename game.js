@@ -6,12 +6,12 @@ function computerPlay(item) {
     return item[randomIndex]
 }
 
-function score(whoScored) {
-    if (whoScored == 'player') {
+function score(scoredBy) {
+    if (scoredBy == 'player') {
         playerScore += 1
         userH2.textContent = 'Player : ' + playerScore
     }
-    else if (whoScored == 'comp') {
+    else if (scoredBy == 'comp') {
         compScore += 1
         compH2.textContent = 'Computer : ' + compScore
     }
@@ -21,18 +21,18 @@ function score(whoScored) {
 }
 
 function restartButton() {
-    restartBtn.classList.toggle('restart')
+    restartBtn.classList.toggle('restart-visibility')
 }
 
 function finalScore() {
     if (playerScore == 5) {
-        resultH1.textContent = 'FINAL WINNER: YOU'
+        resultH1.textContent = 'YOU'
     }
     else if (compScore == 5) {
-        resultH1.textContent = 'FINAL WINNER: COMPUTER'
+        resultH1.textContent = 'COMPUTER'
     }
 
-    resultH2.textContent = '\uD83D\uDE00'
+    resultH2.textContent = 'WIN THIS GAME'
 
     buttonPaper.disabled = true
     buttonPaper.classList.toggle('btn-disabled')
@@ -47,7 +47,6 @@ function finalScore() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    divResult.parentElement.classList.remove('hidden')
     if (playerSelection == computerSelection) {
         resultH1.textContent = 'TIE'
         resultH2.textContent = playerSelection + ' Can\'t beat ' + computerSelection
@@ -73,17 +72,35 @@ function playRound(playerSelection, computerSelection) {
 }
 
 let divHidden = document.querySelector('div.hidden')
-let buttonRock = document.querySelector('#btn-1')
-let buttonPaper = document.querySelector('#btn-2')
-let buttonScissors = document.querySelector('#btn-3')
-let divResult = document.querySelector('.result')
+let buttonRock = document.querySelector('#rock')
+let buttonPaper = document.querySelector('#paper')
+let buttonScissors = document.querySelector('#scissors')
+let divResult = document.querySelector('.round-winner')
 let resultH1 = document.createElement('H1')
 let resultH2 = document.createElement('H2')
 let userH2 = document.querySelector('.user-score')
 let compH2 = document.querySelector('.comp-score')
-let restartBtn = document.querySelector('.restart')
+let restartBtn = document.querySelector('.restart-button')
+let restartImg = document.querySelector('.restart-img')
+let themeMode = document.querySelector('#theme-mode')
 
-resultH2.style.marginTop = '0'
+resultH2.style.margin = '0px .5rem'
+resultH1.style.color = '#232323'
+resultH2.style.color = '#232323'
+userH2.style.color = '#232323'
+compH2.style.color = '#232323'
+
+
+themeMode.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode')
+
+    if(document.body.classList.contains('light-mode')) {
+        themeMode.src = './images/sun.png'
+    }
+    else {
+        themeMode.src = './images/moon.png'
+    }
+})
 
 buttonRock.addEventListener('click', () => {
     playRound(buttonRock.textContent, computerPlay(item))
@@ -108,7 +125,7 @@ restartBtn.addEventListener('click', () => {
     resultH1.textContent = ''
     resultH2.textContent = ''
     userH2.textContent = 'Player : 0'
-    compH2.textContent = 'Comp : 0'
+    compH2.textContent = 'Computer : 0'
 
     playerScore = 0
     compScore = 0
