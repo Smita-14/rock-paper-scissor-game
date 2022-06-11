@@ -21,7 +21,7 @@
 
 ## :cherry_blossom: A Challenge by [The Odin Project :purple_heart:](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors)
 
-- *An Awesome Learning community.*
+*An Awesome Learning community.*
 
 - :cactus: **[Challenge Part 1](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)**
 - :cactus: **[Challenge Part 2](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors)**
