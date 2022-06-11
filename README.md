@@ -22,7 +22,7 @@
 **:sunflower: Icons by [Icons8 :heart:](https://icons8.com/)**
 
 
-## :cherry_blossom: A Challenge by [The Odin Project :purple_heart:](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors)
+## :cherry_blossom: A Challenge by [The Odin Project :purple_heart:](https://www.theodinproject.com)
 
 *An Awesome Learning community.*
 
