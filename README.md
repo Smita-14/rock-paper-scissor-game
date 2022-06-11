@@ -8,9 +8,12 @@
 
 
 ### Built With
-- CSS Flexbox
+
+- Vanilla Javascript
 
 - CSS Custom properties
+
+- CSS Flexbox
 
 - Mobile-First workflow
 
