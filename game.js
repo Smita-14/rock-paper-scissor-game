@@ -71,6 +71,17 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function toggleTheme () {
+    document.body.classList.toggle('light-mode')
+
+    if(document.body.classList.contains('light-mode')) {
+        themeMode.src = './images/sun.png'
+    }
+    else {
+        themeMode.src = './images/moon.png'
+    }
+}
+
 let divHidden = document.querySelector('div.hidden')
 let buttonRock = document.querySelector('#rock')
 let buttonPaper = document.querySelector('#paper')
@@ -91,20 +102,25 @@ userH2.style.color = '#232323'
 compH2.style.color = '#232323'
 
 
-themeMode.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode')
 
-    if(document.body.classList.contains('light-mode')) {
-        themeMode.src = './images/sun.png'
-    }
-    else {
-        themeMode.src = './images/moon.png'
-    }
-})
+themeMode.addEventListener('click', toggleTheme)
+
+// themeMode.addEventListener('click', () => {
+//     document.body.classList.toggle('light-mode')
+
+//     if(document.body.classList.contains('light-mode')) {
+//         themeMode.src = './images/sun.png'
+//     }
+//     else {
+//         themeMode.src = './images/moon.png'
+//     }
+// })
 
 buttonRock.addEventListener('click', () => {
     playRound(buttonRock.textContent, computerPlay(item))
 })
+
+// buttonRock.addEventListener('click', playRound(buttonRock.textContent,computerPlay(item)))
 
 buttonPaper.addEventListener('click', () => {
     playRound(buttonPaper.textContent, computerPlay(item))
