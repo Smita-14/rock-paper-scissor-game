@@ -17,8 +17,6 @@
 
 - Mobile-First workflow
 
->
->
 **:sunflower: Icons by [Icons8 :heart:](https://icons8.com/)**
 
 
@@ -27,6 +25,5 @@
 *An Awesome Learning community.*
 
 - :cactus: **[Challenge Part 1](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)**
+
 - :cactus: **[Challenge Part 2](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors)**
-
-
