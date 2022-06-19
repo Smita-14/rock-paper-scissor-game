@@ -7,7 +7,7 @@
 
 :root {
     --body-color: rgb(27, 27, 27);
-    --white-color: rgb(245, 245, 245);
+    --white-color: rgb(255, 255, 255);
     --text2-color: rgb(35, 35, 35);
     --result-color: rgb(254, 249, 239);
     --rock-color: rgb(102, 51, 153);
@@ -20,7 +20,6 @@
 
 .light-mode {
     --body-color: rgb(251, 243, 189);
-    --white-color: rgb(246, 251, 244);
     --rock-color: rgb(162, 210, 255);
     --paper-color: rgb(255, 134, 94);
     --scissors-color: rgb(100, 219, 141);
