@@ -48,25 +48,26 @@ function finalScore() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
-        resultH1.textContent = 'TIE'
+        if (resultH1.textContent.includes('TIE')) {
+            console.log('tie again')
+            resultH1.textContent = resultH1.textContent += '!'
+        }
+        else {
+            resultH1.textContent = 'TIE'
+        }
+
         resultH2.textContent = playerSelection + ' Can\'t beat ' + computerSelection
-        divResult.appendChild(resultH1)
-        divResult.appendChild(resultH2)
     }
 
     else if ((playerSelection == 'Rock' && computerSelection == 'Scissors') || (playerSelection == 'Scissors' && computerSelection == 'Paper') || (playerSelection == 'Paper' && computerSelection == 'Rock')) {
         resultH1.textContent = 'YOU WIN!'
         resultH2.textContent = playerSelection + ' beats ' + computerSelection
-        divResult.appendChild(resultH1)
-        divResult.appendChild(resultH2)
         score('player')
     } 
     
     else {
         resultH1.textContent = 'COMPUTER WIN!'
         resultH2.textContent = computerSelection + ' beats ' + playerSelection
-        divResult.appendChild(resultH1)
-        divResult.appendChild(resultH2)
         score('comp')
     }
 }
@@ -87,34 +88,16 @@ let buttonRock = document.querySelector('#rock')
 let buttonPaper = document.querySelector('#paper')
 let buttonScissors = document.querySelector('#scissors')
 let divResult = document.querySelector('.round-winner')
-let resultH1 = document.createElement('H1')
-let resultH2 = document.createElement('H2')
+let resultH1 = document.querySelector('.result-1')
+let resultH2 = document.querySelector('.result-2')
 let userH2 = document.querySelector('.user-score')
 let compH2 = document.querySelector('.comp-score')
 let restartBtn = document.querySelector('.restart-button')
 let restartImg = document.querySelector('.restart-img')
 let themeMode = document.querySelector('#theme-mode')
 
-resultH2.style.margin = '0px .5rem'
-resultH1.style.color = '#232323'
-resultH2.style.color = '#232323'
-userH2.style.color = '#232323'
-compH2.style.color = '#232323'
-
-
 
 themeMode.addEventListener('click', toggleTheme)
-
-// themeMode.addEventListener('click', () => {
-//     document.body.classList.toggle('light-mode')
-
-//     if(document.body.classList.contains('light-mode')) {
-//         themeMode.src = './images/sun.png'
-//     }
-//     else {
-//         themeMode.src = './images/moon.png'
-//     }
-// })
 
 buttonRock.addEventListener('click', () => {
     playRound(buttonRock.textContent, computerPlay(item))
