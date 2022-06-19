@@ -49,7 +49,6 @@ function finalScore() {
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         if (resultH1.textContent.includes('TIE')) {
-            console.log('tie again')
             resultH1.textContent = resultH1.textContent += '!'
         }
         else {
@@ -83,27 +82,21 @@ function toggleTheme () {
     }
 }
 
-let divHidden = document.querySelector('div.hidden')
+let themeMode = document.querySelector('#theme-mode')
 let buttonRock = document.querySelector('#rock')
 let buttonPaper = document.querySelector('#paper')
 let buttonScissors = document.querySelector('#scissors')
-let divResult = document.querySelector('.round-winner')
+let restartBtn = document.querySelector('.restart-button')
 let resultH1 = document.querySelector('.result-1')
 let resultH2 = document.querySelector('.result-2')
 let userH2 = document.querySelector('.user-score')
 let compH2 = document.querySelector('.comp-score')
-let restartBtn = document.querySelector('.restart-button')
-let restartImg = document.querySelector('.restart-img')
-let themeMode = document.querySelector('#theme-mode')
-
 
 themeMode.addEventListener('click', toggleTheme)
 
 buttonRock.addEventListener('click', () => {
     playRound(buttonRock.textContent, computerPlay(item))
 })
-
-// buttonRock.addEventListener('click', playRound(buttonRock.textContent,computerPlay(item)))
 
 buttonPaper.addEventListener('click', () => {
     playRound(buttonPaper.textContent, computerPlay(item))
